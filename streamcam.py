@@ -1,10 +1,32 @@
 import cv2
 
-cap = cv2.VideoCapture(0)
 
-while True:
-    success, img = cap.read()
-    cv2.imshow("StreamCam", img)
+def main():
+    cap = cv2.VideoCapture(0)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+    while True:
+        # get frame
+        success, img = cap.read()
+
+        # generate mask
+        mask = get_mask(img)
+
+        # apply mask
+        masked_img = apply_mask(img, mask)
+
+        # show result
+        # cv2.imshow("StreamCam", masked_img)
+        cv2.imshow("StreamCam", img)
+
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+def get_mask(frame):
+    pass
+
+def apply_mask(image, mask):
+    pass
+
+if __name__ == "__main__":
+    main()
+
