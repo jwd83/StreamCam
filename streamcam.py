@@ -6,18 +6,18 @@ def main():
 
     while True:
         # get frame
-        success, img = cap.read()
+        success, frame = cap.read()
 
         # generate mask
-        mask = get_mask(img)
+        mask = get_mask(frame)
 
         # apply mask
-        masked_img = apply_mask(img, mask)
+        masked_frame = apply_mask(frame, mask)
 
         # show result
-        # cv2.imshow("StreamCam", masked_img)
-        cv2.imshow("StreamCam", img)
+        cv2.imshow("StreamCam", masked_frame)
 
+        # wait for next frame
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
@@ -25,7 +25,7 @@ def get_mask(frame):
     pass
 
 def apply_mask(image, mask):
-    pass
+    return image
 
 if __name__ == "__main__":
     main()
