@@ -2,6 +2,7 @@
 #
 # https://elder.dev/posts/open-source-virtual-background/
 # https://github.com/fangfufu/Linux-Fake-Background-Webcam/blob/master/bodypix/app.js
+# https://github.com/ajaichemmanam/simple_bodypix_python
 
 import cv2
 
