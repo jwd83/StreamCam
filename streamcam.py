@@ -1,5 +1,9 @@
-import cv2
+# resources
+#
+# https://elder.dev/posts/open-source-virtual-background/
+# https://github.com/fangfufu/Linux-Fake-Background-Webcam/blob/master/bodypix/app.js
 
+import cv2
 
 def main():
     cap = cv2.VideoCapture(0)
@@ -22,6 +26,10 @@ def main():
             break
 
 def get_mask(frame):
+    # the following method in bodypix are needed
+    # decodeImage
+    # segmentPerson
+
     pass
 
 def apply_mask(image, mask):
